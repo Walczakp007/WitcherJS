@@ -1,0 +1,40 @@
+body
+{
+	margin: 0 !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.main-screen {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+	margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 100px;
+  background-image: url("./media/witcher.jpg");
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color:  #ffffe6;
+
+}
+
+.operating-screen {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+	margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 100px;
+  background-image: url("./media/main.jpg");
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color:  black;
+
+}

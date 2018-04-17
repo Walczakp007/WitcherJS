@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class = "main-screen">
+      WitcherJS - JavaScript Framework created for Fun
+    </div>
+    <div class = "operating-screen">
+      Create a hero... <br>
+      <div id="logindiv">
+          <input type="text" placeholder="Firstname... " id="firstname"></input>
+          <input type="text" placeholder="Lastname... " id="lastname"></input>
+          <input type="text" placeholder="Choose a number... " id="friendNum"></input>
+          <input type="text" placeholder="Choose a number... " id="weaponNum"></input>
+          <select id="lang">
+              <option value="human">Human</option>
+              <option value="elf">Elf</option>
+              <option value="common">Common</option>
+          </select>
+          <input type="button" value="Hi" id="login" />
+
+      </div>
+      <input type="button" value="Wanna fight?" id="fighter" />
+      <input type="button" value="Tell me your friend then" id="friends" />
+      <input type="button" value="Tell me a story" id="story" />
+      <h1 id='greeting'></h1>
+    </div>
+
+  </div>
+  <script src="witcher.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
