@@ -46,6 +46,7 @@ $('#adder').click(function() {
 
 $('#options').click(function() {
   console.log("im here");
+  lGrtr.shuffleTheCollections();
   lGrtr.HTMLshowTheOptions('#options');
 
 });
