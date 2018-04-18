@@ -4,11 +4,11 @@
     return new Geralt.init(firstname,lastname,language, luckyNumFriend, luckyNumWeapon);
   }
 
-  var supportedHeroes = ['geralt', 'ciri'];
+  var supportedHeroes = ['geralt', 'ciri', 'triss', 'regis'];
 
   var supportedLangs = ['human', 'elf', 'common'];
 
-  var supportedWeapon = ['sword', 'magic'];
+  var supportedWeapon = ['sword', 'magic','medallion','ard'];
 
   var stories = ["Once upon a time, Nilfgaard will be under Kovir's reign", "There is nothing better than some Toussaint Wine!" , "Yeneffer? No, I never heard of her"];
 
@@ -49,6 +49,18 @@
       }
     },
 
+    shuffleTheCollections: function() {
+      var shuffle = function(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+      }
+
+      shuffle(supportedHeroes);
+      shuffle(supportedWeapon);
+
+    },
 
     addHero: function(name) {
       if(name === "")
