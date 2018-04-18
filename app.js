@@ -3,7 +3,7 @@ $('#fighter').hide();
 $('#greeting').hide();
 $('#friends').hide();
 $('#story').hide();
-var lGrtr;
+var lGrtr = G$('','','',-1,-1);
 
 $('#login').click(function() {
   lGrtr = G$($('#firstname').val(), $('#lastname').val(), $('#lang').val(), $('#friendNum').val(), $('#weaponNum').val());
@@ -32,6 +32,20 @@ $('#friends').click(function() {
 $('#story').click(function() {
   $('#greeting').hide();
   $('#story').hide();
-  lGrtr.HTMLFight('#greeting');
+  lGrtr.HTMLStory('#greeting');
   $('#greeting').fadeIn(2000);
+  $('#logindiv').show();
+
+});
+
+$('#adder').click(function() {
+  lGrtr.addHero($('#hero').val());
+  lGrtr.addWeapon($('#weapon').val());
+
+});
+
+$('#options').click(function() {
+  console.log("im here");
+  lGrtr.HTMLshowTheOptions('#options');
+
 });

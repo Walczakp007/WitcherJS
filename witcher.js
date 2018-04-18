@@ -51,10 +51,18 @@
 
 
     addHero: function(name) {
+      if(name === "")
+        return this;
       supportedHeroes.push(name);
+      console.log(supportedHeroes);
+      return this;
     },
     addWeapon: function(name) {
+      if(name === "")
+        return this;
       supportedWeapon.push(name);
+      console.log(supportedWeapon);
+      return this;
     },
     greeting: function() {
       return greeting[this.language] + ' ' + this.firstname + ' ' + this.lastname;
@@ -151,7 +159,7 @@
       return this;
     },
 
-    HTMLFriends: function(selector) {
+    HTMLStory: function(selector) {
       if(!$)
         throw "Jquery not loaded";
 
@@ -162,6 +170,28 @@
 
       $(selector).html(this.tellMeAStory());
       console.log(this.log());
+      return this;
+    },
+
+    HTMLshowTheOptions: function(selector) {
+      if(!$)
+        throw "Jquery not loaded";
+
+      if(!selector)
+          throw "Missing selector";
+
+      console.log("Builiding ul");
+
+      var msg = "<ul> <span style=\"color: green;\"> Heroes </span>";
+
+      for(var i = 0; i < supportedHeroes.length ; i++)
+            msg += "<li>" + supportedHeroes[i] + "</li>";
+      var msg = msg + "</ul>";
+      var msg = msg + "<ul> <span style=\"color: green;\"> Weapons </span>";
+      for(var i = 0; i < supportedWeapon.length ; i++)
+            msg += "<li>" + supportedWeapon[i] + "</li>";
+      var msg = msg + "</ul> <br>";
+      $(selector).after(msg);
       return this;
     }
 
